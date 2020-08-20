@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: my-app-2-svc
   labels:
-    service: my-app-2
+    app: my-app-2
 spec:
   ports:
-  - port: 8080
+  - name: "8080"
+    port: 8080
     protocol: TCP
   selector:
-    service: my-app-2
+    app: my-app-2
