@@ -5,7 +5,7 @@ metadata:
   labels:
     app: my-app-2
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: my-app-2
@@ -15,7 +15,7 @@ spec:
         app: my-app-2
     spec:
       containers:
-      - name: simple-express
-        image: RandalP/simple-express
+      - name: my-app-2
+        image: randalp/simple-express
         ports:
-        - containerPort: 80
+        - containerPort: 8080
